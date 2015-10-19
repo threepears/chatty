@@ -24,5 +24,5 @@ triggerMove.addEventListener("click", moveIntoBox);
 var clearEntry = document.querySelector("body");
 clearEntry.addEventListener("click", deleteIt);
  
-var triggerMove = document.getElementById("clear-text");
+var triggerMove = document.getElementById("clear-box");
 triggerMove.addEventListener("click", clearAllText);
