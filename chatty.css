@@ -12,6 +12,7 @@ header {
 
 nav {
 	width: 80%;
+	margin: 0 auto;
 	text-align: right;
 	padding: 10px 0;
 	font-size: 0.8em;
