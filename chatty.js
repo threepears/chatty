@@ -2,6 +2,11 @@
 // Dark 
 function toDark () {
  	document.getElementById("main").classList.toggle("dark");
+  document.getElementById("mainheader").classList.toggle("dark");
+  document.getElementById("innercontain").classList.toggle("dark");
+  document.getElementById("message").classList.toggle("dark");
+  document.getElementById("submit-input").classList.toggle("dark");
+  document.getElementById("clear-box").classList.toggle("dark");
 };
 var dark = document.getElementById("dark");
 dark.addEventListener("click",toDark);

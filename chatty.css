@@ -11,7 +11,7 @@ body {
 	font-size: 2em;
 }
 
-header {
+#mainheader {
 	background-color: #000;
 	color: #CCB28A;
 }
@@ -130,26 +130,36 @@ button:hover {
 	color: #fff;	
 }
 
-header .dark {
+#mainheader.dark {
 	background-color: #B2B2D1;
 	color: #000066;
 }
 
-#container input#submit-input .dark {
+#container input#submit-input.dark {
 	background-color: #000066;
 	color: #fff;
 }
 
-#innercontain .dark {
+#container input#submit-input.dark:hover {
+	background-color: #730000;
+	cursor: pointer;
+}
+
+#innercontain.dark {
 	background-color: #B2B2D1;
 	border: 2px solid #4D4D94;
 }
 
-#message .dark {
+#message.dark {
 	background-color: #8080B2;
 	border: 1px solid #4D4D94;
 }
 
-button .dark {
+#clear-box.dark {
 	background-color: #000066;
+}
+
+#clear-box.dark:hover {
+	background-color: #730000;
+	cursor: pointer;
 }
