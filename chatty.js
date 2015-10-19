@@ -30,7 +30,7 @@ document.addEventListener("keyup", function (e) {
 });
 
 
-
+//moves text from input to display box
 function moveIntoBox (clickEvent  ){
   
   var fieldInput = document.getElementById("field-input").value;
@@ -38,6 +38,8 @@ function moveIntoBox (clickEvent  ){
   var textBox = "<p class ='entry'>" + fieldInput + "<button class ='button' id ='deletor' type='button' target = 'delete' text='Delete'>Delete</button></p><br>";  
     content.innerHTML = textBox + content.innerHTML;
 }
+
+
 function deleteIt () {
 if (event.target.id === "deletor") {
   var checker = event.target.parentNode;
@@ -47,6 +49,7 @@ if (event.target.id === "deletor") {
   }
 
 function clearAllText(){
+var content = document.getElementById("text-box");
 content.innerHTML = "";  
 }
 
@@ -59,4 +62,4 @@ clearEntry.addEventListener("click", deleteIt);
  
 var triggerMove = document.getElementById("clear-box");
 triggerMove.addEventListener("click", clearAllText);
->>>>>>> dea3e1ac9423487d236b7cd6df7bd67480cd4e58
+
