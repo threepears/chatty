@@ -108,6 +108,10 @@ h1 + p {
 	border-bottom: 1px solid #bbb;
 }
 
+#text-box > p:last-child {
+	border-bottom: 0;
+}
+
 button {
 	margin: 2% 0 2% 5%;
 	padding: 1% 2%;
