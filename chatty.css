@@ -74,6 +74,11 @@ h1 + p {
 	cursor: pointer;
 }
 
+#container input#submit-input.disable {
+	background-color: #BBB;
+	cursor: auto;
+}
+
 #innercontain {
 	background-color: #E6D8C4;
 	padding: 3% 3%;
