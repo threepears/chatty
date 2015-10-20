@@ -117,6 +117,10 @@ h1 + p {
 	border-bottom: 0;
 }
 
+.entry span {
+	font-weight: bold;
+}
+
 button {
 	margin: 2% 0 2% 5%;
 	padding: 1% 2%;

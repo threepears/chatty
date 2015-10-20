@@ -63,7 +63,7 @@ function moveIntoBox (clickEvent) {
   var field = document.getElementById("field-input");
   var fieldInput = document.getElementById("field-input").value;
   var content = document.getElementById("text-box");
-  var textBox = "<p class ='entry'>" + fieldInput + timeStamp + "<button class ='button' id ='deletor' type='button' target = 'delete' text='Delete'>Delete</button></p>";  
+  var textBox = "<p class ='entry'><span>" + fieldInput + "</span>&nbsp;&nbsp;" + timeStamp + "<button class ='button' id ='deletor' type='button' target = 'delete' text='Delete'>Delete</button></p>";  
   numberEntries.push(textBox);
   console.log("function next");
   noMoreText();
