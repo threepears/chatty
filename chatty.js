@@ -6,8 +6,14 @@ function toDark () {
   document.getElementById("innercontain").classList.toggle("dark");
   document.getElementById("message").classList.toggle("dark");
   document.getElementById("submit-input").classList.toggle("dark");
+  document.getElementById("text-box").classList.toggle("dark");
   document.getElementById("clear-box").classList.toggle("dark");
+  var buttonz = document.getElementsByClassName("button");
+  for (i = 0; i < buttonz.length; i++) {
+    buttonz[i].classList.toggle("dark");
+  }
 };
+
 var dark = document.getElementById("dark");
 dark.addEventListener("click",toDark);
 
@@ -30,18 +36,22 @@ clear.addEventListener("click", toClear);
 document.addEventListener("keyup", function (e) {
     var key = e.which || e.keyCode;
     	if (key === 13) {
-            document.getElementById("submit-input").click();
-        }
+        document.getElementById("submit-input").click();
+      }
 });
 
 
 //moves text from input to display box
-function moveIntoBox (clickEvent  ){
+function moveIntoBox (clickEvent) {
   
+  var field = document.getElementById("field-input");
   var fieldInput = document.getElementById("field-input").value;
   var content = document.getElementById("text-box");
-  var textBox = "<p class ='entry'>" + fieldInput + "<button class ='button' id ='deletor' type='button' target = 'delete' text='Delete'>Delete</button></p><br>";  
-    content.innerHTML = textBox + content.innerHTML;
+  var textBox = "<p class ='entry'>" + fieldInput + "<button class ='button' id ='deletor' type='button' target = 'delete' text='Delete'>Delete</button></p>";  
+  content.innerHTML = textBox + content.innerHTML;
+  console.log(fieldInput);
+  field.value = " ";
+  console.log(fieldInput);
 }
 
 

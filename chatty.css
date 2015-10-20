@@ -99,14 +99,17 @@ h1 + p {
 	border: 2px solid rgb(238,238,238);
 	border-radius: 10px;
 	background-color: #fff;
+	padding: 0 5%;
 }
 
-.entry {
-
+#text-box > p {
+	margin: 0;
+	padding: 1% 0;
+	border-bottom: 1px solid #bbb;
 }
 
 button {
-	margin: 2% 0;
+	margin: 2% 0 2% 5%;
 	padding: 1% 2%;
 	font-size: 0.8em;
 	font-weight: bold;
@@ -153,6 +156,19 @@ button:hover {
 #message.dark {
 	background-color: #8080B2;
 	border: 1px solid #4D4D94;
+}
+
+#text-box.dark {
+	color: #000;
+}
+
+#deletor.dark {
+	background-color: #000066;	
+}
+
+#deletor.dark:hover {
+	background-color: #730000;
+	cursor: pointer;
 }
 
 #clear-box.dark {
