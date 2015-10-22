@@ -1,42 +1,43 @@
+$(document).ready(function() {
+  // All the JavaScript that depends on jQuery will be written here
 
 // Dark 
 function toDark () {
- 	document.getElementById("main").classList.toggle("dark");
-  document.getElementById("mainheader").classList.toggle("dark");
-  document.getElementById("innercontain").classList.toggle("dark");
-  document.getElementById("message").classList.toggle("dark");
-  document.getElementById("submit-input").classList.toggle("dark");
-  document.getElementById("text-box").classList.toggle("dark");
-  document.getElementById("clear-box").classList.toggle("dark");
-  var buttonz = document.getElementsByClassName("button");
+ 	$("#main").toggleClass("dark");
+  $("#mainheader").toggleClass("dark");
+  $("#innercontain").toggleClass("dark");
+  $("#message").toggleClass("dark");
+  $("#submit-input").toggleClass("dark");
+  $("#text-box").toggleClass("dark");
+  $("#clear-box").toggleClass("dark");
+  var buttonz = $(".button");
   for (i = 0; i < buttonz.length; i++) {
-    buttonz[i].classList.toggle("dark");
+    buttonz[i].toggleClass("dark");
   }
 };
 
-var dark = document.getElementById("dark");
-dark.addEventListener("click",toDark);
+$("#dark").click(toDark);
 
 
 // Large Text
 function toLarge () {
- 	document.getElementById("main").classList.toggle("large");
+ 	$("#main").toggleClass("large");
 };
-var large = document.getElementById("large");
-large.addEventListener("click",toLarge);
+
+$("#large").click(toLarge);
 
 // Clear button
 function toClear() {
-	document.getElementById("text-box").value = "";
+	$("#text-box").val("");
 };
-var clear = document.getElementById("clear-box")
-clear.addEventListener("click", toClear);
+
+$("#clear-box").click(toClear);
 
 // Enter
-document.addEventListener("keyup", function (e) {
+$(document).keyup(function (e) {
     var key = e.which || e.keyCode;
     	if (key === 13) {
-        document.getElementById("submit-input").click();
+        $("#submit-input").click();
       }
 });
 
@@ -45,8 +46,8 @@ var numberEntries = [];
 function noMoreText () {
 if (numberEntries.length > 20) {
 	console.log(numberEntries.length);
-	document.getElementById("submit-input").disabled = true;
-	document.getElementById("submit-input").classList.add("disable");
+	$("#submit-input").prop("disabled", true);
+	$("#submit-input").addClass("disable");
 	}
 }
 
@@ -60,16 +61,15 @@ function moveIntoBox (clickEvent) {
   var theMinute = theDate.getMinutes();
   console.log(theYear);
   var timeStamp = " (" + (theMonth + 1) + "/" + theDay + "/" + theYear  + ", " + theHour + ":" + theMinute + ")";
-  var field = document.getElementById("field-input");
-  var fieldInput = document.getElementById("field-input").value;
-  var content = document.getElementById("text-box");
+  var field = $("#field-input");
+  var fieldInput = $("#field-input").val();
   var textBox = "<p class ='entry'><span>" + fieldInput + "</span>&nbsp;&nbsp;" + timeStamp + "<button class ='button' id ='deletor' type='button' target = 'delete' text='Delete'>Delete</button></p>";  
   numberEntries.push(textBox);
   console.log("function next");
   noMoreText();
-  content.innerHTML = textBox + content.innerHTML;
+  $("#text-box").append(textBox);
   console.log(fieldInput);
-  field.value = " ";
+  field.val("");
   console.log(fieldInput);
 }
 
@@ -80,26 +80,23 @@ if (event.target.id === "deletor") {
   console.log(checker);
   event.target.parentNode.remove();
   numberEntries.pop();
-  document.getElementById("submit-input").disabled = false;
-  document.getElementById("submit-input").classList.remove("disable");
+  $("submit-input").prop("disabled", false);
+  $("submit-input").removeClass("disable");
     } 
     noMoreText();
   }
 
 function clearAllText(){
-var content = document.getElementById("text-box");
-content.innerHTML = "";  
+  $("#text-box").html("");  
 }
 
 
-var triggerMove = document.getElementById("submit-input");
-triggerMove.addEventListener("click", moveIntoBox);
+$("#submit-input").click(moveIntoBox);
 
-var clearEntry = document.querySelector("body");
-clearEntry.addEventListener("click", deleteIt);
+$("body").click(deleteIt);
  
-var triggerMove = document.getElementById("clear-box");
-triggerMove.addEventListener("click", clearAllText);
+$("#clear-box").click(clearAllText)
 
+});
 
 
