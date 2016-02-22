@@ -9,3 +9,13 @@ Create an interactive message board, where users can enter text and submit to a 
 ### Required Tools
 
 JQuery (CDN link), code editor
+
+### Installation
+
+Create new repository and enter the following command:
+
+```sh
+$ git clone https://github.com/threepears/chatty.git
+```
+
+Open the index.html file in your browser and chat away!
